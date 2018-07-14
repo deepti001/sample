@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 dbcsbcjws b gsdh yeg
 new changes to check whethre it will push after editing at git
+=======
+sdvchas
+>>>>>>> 9ec61582779351fef6bac12e74f5f4dd78e68375
