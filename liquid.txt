@@ -1,0 +1,50 @@
+
+---------------------------------------------------------
+Product Liquid Page Template
+
+<h2> {{product.title}} </h2>
+{{product.description}}
+<form actions="/cart/add" method="post" enctype="multipart/form-data"> 
+	<select name="id">
+	  {% for variant in product.variants %}
+	  {% if variant.available == true %}
+	    <option value="{{variant.id}}"> {{variant.title}} for {{variant.price | money_with_currency}} </option>
+	  {% else %}
+	    <option disabled="disabled"> {{variant.title}} - sold out! </option>
+	  {% endif %}
+	  {% endfor %}
+	<select>
+	
+	<input type="submit" name="add" value="Add to Cart" class="button">
+</form>
+
+-------------------------------------------------------
+
+<html>
+<head>
+  {{content_for_header}}
+
+  <title>
+	{{shop.name}} - {{page_title}}
+  </title>
+
+  {{'screen.css' | asset_url | stylesheet_tag}}
+
+</head>
+<body>
+{{ content_for_layout }}
+</body>
+</html>
+
+
+
+---------------------------------------------------------------
+{ % if product.has_only_default_variant % }
+	<input name="id" value="{{variant.id}} type="hidden">
+{% else %}
+	<select name="id">
+	{% for variant in product.variant %}
+		<option value="{{variant.id}}"> {{variant.title}} </option>
+	{% endfor %}
+	</select>
+{% endif %}
