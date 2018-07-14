@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 dbcsbcjws b gsdh yehbahsb
 new changes to check whethre it will push after editing at git
 =======
 sdvchas
 >>>>>>> 9ec61582779351fef6bac12e74f5f4dd78e68375
+=======
+sdvhvfbfhchas
+>>>>>>> 324e226ef83fc7b749a28420e7839df5af1f436d
